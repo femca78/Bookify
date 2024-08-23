@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bookify.Domain.Abstractions
 {
-    internal interface IUnityOfWork
+    public interface IUnityOfWork
     {
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
+
     }
 }
